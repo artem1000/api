@@ -7,6 +7,10 @@ import io.grpc.protobuf.services.ProtoReflectionService;
 
 import java.io.IOException;
 
+/*
+* To run from the CLI:  java -jar ./build/libs/basicGrpc-1.0-SNAPSHOT.jar
+* */
+
 public class GrpcServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = ServerBuilder.forPort(9091)
