@@ -62,3 +62,10 @@ jar {
         )
     }
 }
+
+// Copying all dependency libs into the buildDir so that they
+// can be easily copied into Docker Image
+tasks.register('copyToLib', Copy) {
+    into "$buildDir/output/lib"
+    from configurations.runtime
+}
